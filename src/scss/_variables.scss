@@ -1,0 +1,24 @@
+// Variables
+$transition:all 0.15s ease-in-out;
+$translate: translateY(-5px);
+//Colors
+
+// White Shades
+
+// Purple
+$color-primary: #ab48f1;
+$color-primary-lighten:  mix(white,$color-primary, 40%);
+$color-primary-lighten-60:  mix(white,$color-primary, 60%);
+$color-primary-darken:  mix(black,$color-primary, 40%);
+$color-primary-darken-60:  mix(black,$color-primary, 60%);
+// Orange
+$color-secondary:#f78147;
+$color-secondary-lighten: mix(white,$color-secondary, 40%);
+$color-secondary-lighten-60: mix(white,$color-secondary, 60%);
+$color-secondary-lighten-80: mix(white,$color-secondary, 80%);
+$color-secondary-darken: mix(black,$color-secondary, 40%);
+$color-secondary-darken-60: mix(black,$color-secondary, 60%);
+
+// Font Classes
+$font-primary: Luckiest Guy, Arial, Helvetica, sans-serif;
+$font-secondary: Josefin Sans, Arial, Helvetica, sans-serif;

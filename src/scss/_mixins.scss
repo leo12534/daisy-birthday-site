@@ -1,0 +1,73 @@
+// MIXINS
+
+// FlexBox Mixin
+@mixin flexbox($display:null, $direction:null, $placeContent:null, $placeItems:null, $wrap:null,$shrink:0, $grow:0, $alignContent:null, $justifyContent:null,$alignItems:null, $justifyItems:null) {
+
+  @if $direction == null and $wrap== null{
+    flex-flow:null null;
+  } @else {
+    flex-flow: $direction $wrap;
+  }
+
+  @if $display == null {
+    display:null;
+  } @else {
+    display:flex;
+  }
+
+  @if $placeContent == null {
+      @if $alignContent   { align-content: $alignContent; }
+      @if $justifyContent { justify-content: $justifyContent; }
+    } @else {
+      place-content: $placeContent;
+    }
+
+    @if $placeItems == null {
+      @if $alignItems   { align-items: $alignItems; }
+      @if $justifyItems { justify-items: $justifyItems; }
+    } @else {
+      place-items: $placeItems;
+    }
+}
+
+// Font Size Mixin
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// Global Hover Mixin
+@mixin animation__hover(){
+    transition: $transition;
+  &:hover {
+    transform: $translate;
+  }
+}
+
+// MEDIA QUERY MIXIN
+/* breakpoint screen widths */
+$large: 900px;
+$medium: 768px;
+$small: 480px;
+
+@mixin mediaquery-lg {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin mediaquery-md {
+  @media only screen and (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin mediaquery-sm {
+  @media only screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin boxShadow {
+  box-shadow: inset -6px -7px 19px $color-secondary-lighten-80, 0px 1px 11px 2px $color-secondary-lighten-60;
+}

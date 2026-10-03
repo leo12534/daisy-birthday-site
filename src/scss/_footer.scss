@@ -1,0 +1,12 @@
+footer {
+	background-color: $color-secondary-lighten-60;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+  padding:2em 0;
+  p {
+  color:$color-primary-darken;
+  font-weight: bold;
+  }
+}
+

@@ -1,0 +1,126 @@
+// _components.scss — styles for every component necessary for that project, including buttons, modals, etc.
+
+// General Button Styling
+.btn {
+	padding: 10px 15px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+  @include mediaquery-md {
+    padding: 15px 30px;
+  }
+  @include mediaquery-lg {
+    padding: 15px 50px;
+  }
+}
+
+// Header Butter Dish Button Styling
+.btn-dish {
+	background-color: #fbf9fc;
+	position: relative;
+  color:$color-primary-darken-60;
+  line-height: 1;
+  @include font-size(1.4);
+  text-shadow: -1px -1px 0px $color-primary-lighten-60;
+	margin: 0 5px;
+  @include boxShadow;
+  transition:$transition;
+  @include mediaquery-lg {
+    @include font-size(1.6);
+  }
+
+  &:after, &:before {
+    content: '';
+	  position: absolute;
+    background-color: $color-primary-lighten;
+  }
+
+  &:after  {
+	top: -8px;
+	left: 45%;
+	right: 45%;
+  height: 8px;
+	width: 10%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-right: 1px solid $color-primary-lighten;
+	border-top: 1px solid $color-primary-lighten;
+	border-left: 1px solid $color-primary-lighten;
+  }
+
+  &:before {
+	bottom: 0;
+	left: -5%;
+	height: 5px;
+	width: 110%;
+	border: 1px solid $color-primary-lighten;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+  }
+
+  &:hover {
+	background-color: $color-primary;
+	color: #fff;
+	text-shadow: none;
+	box-shadow: inset 3px -5px 8px 0px #615e63;
+
+  }
+}
+
+/* Gallery Wrap */
+.gallery {
+	background-color: #240e34;
+	position: relative;
+	height: 30vh;
+	overflow: hidden;
+}
+
+.gallery-wrap {
+	position: relative;
+	transform: translate3d(-50%, -50%, 0) rotate(22.5deg);
+	left: 50%;
+	top: 50%;
+}
+
+.gallery-wrap,
+[class*='gallery-row'] {
+	display: grid;
+	gap: 0.45rem;
+	width: 140%;
+}
+
+[class*='gallery-row'] {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+[class*='gallery-row'] img {
+	width: 100%;
+}
+
+
+/** GRID ROW GALLERY SCROLL CONTENT STYLINGS **/
+
+@media (min-width: 600px) {
+	.gallery {
+		height: 45vh;
+	}
+	.gallery-wrap,
+	[class*='gallery-row'] {
+		width: 135%;
+	}
+}
+
+@media (min-width: 900px) {
+	.gallery {
+		height: 60vh;
+	}
+	.gallery-wrap,
+	[class*='gallery-row'] {
+		gap: 1.05rem;
+		width: 140%;
+	}
+}
+

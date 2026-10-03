@@ -1,0 +1,26 @@
+{
+  "name": "dibby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rm -rf .cache dist && parcel src/index.html",
+    "buildlight": "parcel build src/index.html --no-source-maps --no-minify --public-url . --no-cache",
+    "build": "parcel build src/index.html"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leo12534/dibby.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leo12534/dibby/issues"
+  },
+  "homepage": "https://github.com/leo12534/dibby#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.42.1"
+  }
+}
